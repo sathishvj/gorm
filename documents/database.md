@@ -4,13 +4,13 @@
 
 ## Connecting to a database
 
-In order to connect to a database, you need to import the database's driver first. For example:
+To connect to a database, import the database's driver first. For example:
 
 ```go
 import _ "github.com/go-sql-driver/mysql"
 ```
 
-GORM has wrapped some drivers, for easier to remember the import path, so you could import the mysql driver with
+GORM has wrapped some drivers to make it easier to remember the import path. So you could import the mysql driver with:
 
 ```go
 import _ "github.com/jinzhu/gorm/dialects/mysql"
@@ -67,13 +67,13 @@ func main() {
 
 GORM officially supports the above databases, but you could write a dialect for unsupported databases.
 
-To write your own dialect, refer to: [https://github.com/jinzhu/gorm/blob/master/dialect.go](https://github.com/jinzhu/gorm/blob/master/dialect.go)
+To write your own dialect, refer: [https://github.com/jinzhu/gorm/blob/master/dialect.go](https://github.com/jinzhu/gorm/blob/master/dialect.go)
 
 ## Migration
 
 ### Auto Migration
 
-Automatically migrate your schema, to keep your schema update to date.
+Automatically migrate your schema, to keep your schema up to date.
 
 **WARNING:** AutoMigrate will **ONLY** create tables, missing columns and missing indexes, and **WON'T** change existing column's type or delete unused columns to protect your data.
 
